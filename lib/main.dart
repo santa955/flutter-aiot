@@ -2,8 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_aiot/pages/home/service.dart';
 import 'package:screen_ratio_adapter/screen_ratio_adapter.dart';
+
+import 'package:flutter_aiot/pages/home/index.dart';
 
 var uiSize = BlueprintsRectangle(375, 667);
 
@@ -24,7 +25,7 @@ class AiotApp extends StatelessWidget {
     return MaterialApp(
       title: '行家设备云',
       theme: ThemeData(primaryColor: Color(0xFFFFFFFF)),
-      home: HomeService(),
+      home: Home(),
       builder: FxTransitionBuilder(builder: null),
     );
   }

@@ -3,17 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
-class Home extends StatelessWidget {
+class HomeIntro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 
-    return Scaffold(
-        body: Container(
+    return Container(
       decoration: BoxDecoration(color: Color(0xFFFFFFFF)),
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        padding: EdgeInsets.only(bottom: 24),
         child: Wrap(
           children: [
             Container(
@@ -107,7 +105,7 @@ class Home extends StatelessWidget {
                   ]),
             ),
             Container(
-              margin: EdgeInsets.only(top: 30, right: 12, bottom: 0, left: 12),
+              margin: EdgeInsets.only(top: 30, right: 12, bottom: 30, left: 12),
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Color(0xFFFFF5F5)),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -150,6 +148,6 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
-    ));
+    );
   }
 }

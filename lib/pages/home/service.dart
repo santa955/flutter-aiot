@@ -34,7 +34,7 @@ class HomeService extends StatelessWidget {
                   margin: EdgeInsets.only(top: 16),
                   child: Center(
                     child: Image(
-                      image: NetworkImage('https://static.zkh360.com/all/image/2021-08-16/31356-8705ed.jpg'),
+                      image: NetworkImage('https://zkh360-aiot-1259000497.cos.ap-shanghai.myqcloud.com/icon/5d1cb085ce741e5a170ddd4df3354975.png'),
                       width: 200,
                       height: 200,
                       fit: BoxFit.cover,
