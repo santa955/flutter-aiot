@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:screen_ratio_adapter/screen_ratio_adapter.dart';
 
 import 'package:flutter_aiot/pages/home/index.dart';
+import 'pages/tools/confirm/index.dart';
 
 var uiSize = BlueprintsRectangle(375, 667);
 
@@ -13,8 +14,8 @@ void main() {
   runApp(AiotApp());
 
   if (Platform.isAndroid) {
-    SystemUiOverlayStyle appStyle =
-        SystemUiOverlayStyle(statusBarColor: Colors.transparent, statusBarIconBrightness: Brightness.dark);
+    SystemUiOverlayStyle appStyle = SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent, statusBarIconBrightness: Brightness.dark);
     SystemChrome.setSystemUIOverlayStyle(appStyle);
   }
 }
@@ -25,7 +26,7 @@ class AiotApp extends StatelessWidget {
     return MaterialApp(
       title: '行家设备云',
       theme: ThemeData(primaryColor: Color(0xFFFFFFFF)),
-      home: Home(),
+      home: ToolConfirm(),
       builder: FxTransitionBuilder(builder: null),
     );
   }

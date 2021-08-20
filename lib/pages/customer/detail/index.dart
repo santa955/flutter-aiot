@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_aiot/widgets/app_bar.dart';
 
 class CustomerInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: new Text('客户详情', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        centerTitle: true,
-      ),
+      appBar: AiotAppBar(context, '客户详情'),
       body: Container(
           decoration: BoxDecoration(color: Color(0xFFF5F7FA)),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[

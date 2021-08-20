@@ -1,20 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_aiot/widgets/app_bar.dart';
-
-import 'list_item.dart';
 import 'search_bar.dart';
+import 'search_item.dart';
 
-class CustomerList extends StatelessWidget {
-  _toDetail(BuildContext context, String url, {title = ''}) {
-    print(url);
-  }
-
+class ToolSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF5F7FA),
-      appBar: AiotAppBar(context, '客户列表'),
+      appBar: AiotAppBar(context, '产品速报'),
       body: Container(
         decoration: BoxDecoration(color: Color(0xFFF5F7FA)),
         child: Column(
@@ -26,12 +21,8 @@ class CustomerList extends StatelessWidget {
                 padding: EdgeInsets.all(0),
                 shrinkWrap: true,
                 children: [
-                  Customer(),
-                  Customer(),
-                  Customer(),
-                  Customer(),
-                  Customer(),
-                  Customer(),
+                  SearchItem(),
+                  SearchItem(),
                 ],
               ),
             )

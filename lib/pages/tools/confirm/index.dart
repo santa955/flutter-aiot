@@ -1,37 +1,25 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_aiot/widgets/app_bar.dart';
+import 'confirm_item.dart';
 
-import 'list_item.dart';
-import 'search_bar.dart';
-
-class CustomerList extends StatelessWidget {
-  _toDetail(BuildContext context, String url, {title = ''}) {
-    print(url);
-  }
-
+class ToolConfirm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF5F7FA),
-      appBar: AiotAppBar(context, '客户列表'),
+      appBar: AiotAppBar(context, '清单确认'),
       body: Container(
         decoration: BoxDecoration(color: Color(0xFFF5F7FA)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            SearchBar(),
+          children: [
             Expanded(
               child: ListView(
-                padding: EdgeInsets.all(0),
+                padding: EdgeInsets.only(bottom: 78),
                 shrinkWrap: true,
                 children: [
-                  Customer(),
-                  Customer(),
-                  Customer(),
-                  Customer(),
-                  Customer(),
-                  Customer(),
+                  ConfirmItem()
                 ],
               ),
             )
