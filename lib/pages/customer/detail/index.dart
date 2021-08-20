@@ -6,10 +6,10 @@ class CustomerInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AiotAppBar(context, '客户详情'),
       body: Container(
           decoration: BoxDecoration(color: Color(0xFFF5F7FA)),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
-            AiotAppBar('客户详情'),
             Expanded(
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
