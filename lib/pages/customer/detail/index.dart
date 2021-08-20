@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_aiot/widgets/app_bar.dart';
-
 class CustomerInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: new Text('客户详情', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        centerTitle: true,
+      ),
       body: Container(
           decoration: BoxDecoration(color: Color(0xFFF5F7FA)),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
-            AiotAppBar('客户详情'),
             Expanded(
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
@@ -33,10 +36,7 @@ class CustomerInfo extends StatelessWidget {
                                 padding: EdgeInsets.only(left: 8),
                                 child: Text(
                                   '基本信息',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                      color: Color(0xFF303133)),
+                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF303133)),
                                 ),
                               )
                             ],
@@ -132,10 +132,7 @@ class CustomerInfo extends StatelessWidget {
                                 padding: EdgeInsets.only(left: 8),
                                 child: Text(
                                   '联系人',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                      color: Color(0xFF303133)),
+                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF303133)),
                                 ),
                               )
                             ],
@@ -210,10 +207,7 @@ class CustomerInfo extends StatelessWidget {
                                 padding: EdgeInsets.only(left: 8),
                                 child: Text(
                                   '其他信息',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                      color: Color(0xFF303133)),
+                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF303133)),
                                 ),
                               )
                             ],
@@ -245,8 +239,7 @@ class CustomerInfo extends StatelessWidget {
                                             child: Text(
                                               '查看设备列表',
                                               overflow: TextOverflow.ellipsis,
-                                              style:
-                                                  TextStyle(color: Color(0xFF303133), fontSize: 14),
+                                              style: TextStyle(color: Color(0xFF303133), fontSize: 14),
                                             ),
                                           )),
                                       Image(

@@ -1,17 +1,156 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_aiot/pages/customer/detail/index.dart';
 
 class HomeTools extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 
-    return Scaffold(
-        body: Center(
-          child: Text('TOOLS'),
-        )
+    return Container(
+      decoration: BoxDecoration(color: Color(0xFFF5F7FA)),
+      child: Stack(
+        children: [
+          new Container(
+            child: Image(
+              image: NetworkImage('https://static.zkh360.com/all/image/2021-08-19/bg-b44d13.png'),
+              height: 250,
+              fit: BoxFit.cover,
+            ),
+          ),
+          new Scaffold(
+            backgroundColor: Colors.transparent,
+            appBar: new AppBar(
+              title: new Text('行家设备云', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+              backgroundColor: Colors.transparent,
+              elevation: 0.0,
+              centerTitle: true,
+            ),
+            body: Container(
+              margin: EdgeInsets.only(top: 125.5, left: 12, right: 12),
+              decoration: BoxDecoration(color: Color(0xFFFFFFFF), borderRadius: BorderRadius.circular(8)),
+              child: SingleChildScrollView(
+                child: Flex(
+                  direction: Axis.vertical,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 16),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(right: 6),
+                            decoration: BoxDecoration(color: Color(0xFF1E64F2)),
+                            child: SizedBox(width: 6, height: 15),
+                          ),
+                          Expanded(
+                              child: Text(
+                            '智能报价',
+                            style: TextStyle(
+                              color: Color(0xFF303133),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ))
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 12, horizontal: 30),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return CustomerInfo();
+                                }),
+                              );
+                            },
+                            child: Column(
+                              children: [
+                                Image(
+                                    image: NetworkImage('https://static.zkh360.com/all/image/2021-08-19/sn-c0753d.png'),
+                                    width: 33,
+                                    height: 32,
+                                    fit: BoxFit.cover),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 12),
+                                  child: Text(
+                                    '振动方案报价',
+                                    style: TextStyle(color: Color(0xFF606266), fontSize: 14),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return CustomerInfo();
+                                }),
+                              );
+                            },
+                            child: Column(
+                              children: [
+                                Image(
+                                    image:
+                                        NetworkImage('https://static.zkh360.com/all/image/2021-08-19/oil-eb3402.png'),
+                                    width: 33,
+                                    height: 32,
+                                    fit: BoxFit.cover),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 12),
+                                  child: Text(
+                                    '油液方案报价',
+                                    style: TextStyle(color: Color(0xFF606266), fontSize: 14),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return CustomerInfo();
+                                }),
+                              );
+                            },
+                            child: Column(
+                              children: [
+                                Image(
+                                    image:
+                                        NetworkImage('https://static.zkh360.com/all/image/2021-08-19/uct-ebb6da.png'),
+                                    width: 33,
+                                    height: 32,
+                                    fit: BoxFit.cover),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 12),
+                                  child: Text(
+                                    '产品速报',
+                                    style: TextStyle(color: Color(0xFF606266), fontSize: 14),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -11,7 +11,7 @@ class HomeService extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           '行家设备云',
-          style: TextStyle(color: Color(0xFF222222), fontWeight: FontWeight.w500, fontSize: 18),
+          style: TextStyle(color: Color(0xFF222222), fontWeight: FontWeight.w600, fontSize: 18),
         ),
         elevation: 0,
         centerTitle: true,
