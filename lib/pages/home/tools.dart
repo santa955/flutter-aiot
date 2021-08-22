@@ -1,9 +1,35 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_aiot/pages/customer/detail/index.dart';
+import 'package:flutter_aiot/pages/customer/list/index.dart';
+import 'package:flutter_aiot/pages/tools/confirm/index.dart';
+import 'package:flutter_aiot/pages/tools/search/index.dart';
 
 class HomeTools extends StatelessWidget {
+  Widget _widgetTool(context, icon, text, navigate) {
+    return GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) {
+              return navigate;
+            }),
+          );
+        },
+        child: Container(
+          child: Column(
+            children: [
+              Image(image: icon, width: 33, height: 32, fit: BoxFit.cover),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 12),
+                child: Text(text, style: TextStyle(color: Color(0xFF606266), fontSize: 14)),
+              )
+            ],
+          ),
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
@@ -61,85 +87,23 @@ class HomeTools extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  return CustomerInfo();
-                                }),
-                              );
-                            },
-                            child: Column(
-                              children: [
-                                Image(
-                                    image: NetworkImage('https://static.zkh360.com/all/image/2021-08-19/sn-c0753d.png'),
-                                    width: 33,
-                                    height: 32,
-                                    fit: BoxFit.cover),
-                                Padding(
-                                  padding: EdgeInsets.symmetric(vertical: 12),
-                                  child: Text(
-                                    '振动方案报价',
-                                    style: TextStyle(color: Color(0xFF606266), fontSize: 14),
-                                  ),
-                                )
-                              ],
-                            ),
+                          _widgetTool(
+                            context,
+                            NetworkImage('https://static.zkh360.com/all/image/2021-08-19/sn-c0753d.png'),
+                            '振动方案报价',
+                            new ToolConfirm(),
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  return CustomerInfo();
-                                }),
-                              );
-                            },
-                            child: Column(
-                              children: [
-                                Image(
-                                    image:
-                                        NetworkImage('https://static.zkh360.com/all/image/2021-08-19/oil-eb3402.png'),
-                                    width: 33,
-                                    height: 32,
-                                    fit: BoxFit.cover),
-                                Padding(
-                                  padding: EdgeInsets.symmetric(vertical: 12),
-                                  child: Text(
-                                    '油液方案报价',
-                                    style: TextStyle(color: Color(0xFF606266), fontSize: 14),
-                                  ),
-                                )
-                              ],
-                            ),
+                          _widgetTool(
+                            context,
+                            NetworkImage('https://static.zkh360.com/all/image/2021-08-19/oil-eb3402.png'),
+                            '油液方案报价',
+                            new CustomerList(),
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  return CustomerInfo();
-                                }),
-                              );
-                            },
-                            child: Column(
-                              children: [
-                                Image(
-                                    image:
-                                        NetworkImage('https://static.zkh360.com/all/image/2021-08-19/uct-ebb6da.png'),
-                                    width: 33,
-                                    height: 32,
-                                    fit: BoxFit.cover),
-                                Padding(
-                                  padding: EdgeInsets.symmetric(vertical: 12),
-                                  child: Text(
-                                    '产品速报',
-                                    style: TextStyle(color: Color(0xFF606266), fontSize: 14),
-                                  ),
-                                )
-                              ],
-                            ),
+                          _widgetTool(
+                            context,
+                            NetworkImage('https://static.zkh360.com/all/image/2021-08-19/uct-ebb6da.png'),
+                            '产品速报',
+                            new ToolSearch(),
                           ),
                         ],
                       ),
