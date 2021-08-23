@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_aiot/pages/tools/result/index.dart';
+import 'package:flutter_aiot/pages/tools/email/index.dart';
 import 'package:flutter_aiot/widgets/app_bar.dart';
 
 class ToolPreview extends StatelessWidget {
@@ -8,7 +8,7 @@ class ToolPreview extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) {
-        return new ToolRusult();
+        return new ToolEmail();
       }),
     );
   }

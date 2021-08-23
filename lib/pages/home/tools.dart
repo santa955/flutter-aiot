@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_aiot/pages/customer/list/index.dart';
-import 'package:flutter_aiot/pages/tools/confirm/index.dart';
+import 'package:flutter_aiot/pages/tools/order/index.dart';
 import 'package:flutter_aiot/pages/tools/search/index.dart';
 
 class HomeTools extends StatelessWidget {
@@ -91,7 +91,7 @@ class HomeTools extends StatelessWidget {
                             context,
                             NetworkImage('https://static.zkh360.com/all/image/2021-08-19/sn-c0753d.png'),
                             '振动方案报价',
-                            new ToolConfirm(),
+                            new ToolOrder(),
                           ),
                           _widgetTool(
                             context,
